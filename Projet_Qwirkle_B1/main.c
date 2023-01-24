@@ -9,7 +9,15 @@
 
 int main(int argc, const char * argv[])
 {
-   int fin;
+    int fin;
+    int nb;
+    JR Joueur [MAX_NOMBRE];
+    PL* Plato;
+    
+    srand(time(NULL));
+    
+    affiche_qwirkle();
+    printf("\n\n\n");
 
    fin = 0;
    while(!fin)
@@ -17,14 +25,14 @@ int main(int argc, const char * argv[])
       int c;
 
       /* affichage menu */
-      printf("1.Choix 1 : Plateau\n"
-             "2.Choix 2\n"
-             "3.Choix 3\n"
-             "4.Quitter \n");
+       printf("1.Choix 1 : Lancer une partie Degrader\n");
+       printf("2.Choix 2 : Test du Chargement\n");
+       printf("3.Choix 3 : Regle du Jeux\n");
+       printf("4.Quitter \n");
 
       c = getchar();
 
-      /* suppression des caracteres dans stdin */
+      /* Suppression des caracteres dans stdin */
       if(c != '\n' && c != EOF)
       {
          int d;
@@ -34,13 +42,15 @@ int main(int argc, const char * argv[])
       switch(c)
       {
          case '1':
-              plateau();
+              nb = demande_nombre_joueur();
+              nom_joueur(Joueur, nb);
+              Chargement();
+              deroulement_partie(Plato, Joueur, nb);
             break;
          case '2':
-            printf("Choix 2\n");
+              Chargement();
             break;
          case '3':
-            printf("Choix 3\n");
             break;
          case '4':
             fin = 1;
