@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D61142B2978002500CCE9CD /* Affiche_carac.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D61142A2978002500CCE9CD /* Affiche_carac.c */; };
 		8D61142D2978313700CCE9CD /* ASCII_dessin.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D61142C2978313700CCE9CD /* ASCII_dessin.c */; };
+		8D61146A29811AEF00CCE9CD /* Deroulement_partie.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D61146929811AEF00CCE9CD /* Deroulement_partie.c */; };
+		8D61146C29811B3200CCE9CD /* Placer_case.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D61146B29811B3200CCE9CD /* Placer_case.c */; };
+		8D6114702981354B00CCE9CD /* condition_victoire.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D61146F2981354B00CCE9CD /* condition_victoire.c */; };
 		8DBF91E42977E179000CA18C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF91E32977E179000CA18C /* main.c */; };
 		8DBF91EE2977E37D000CA18C /* Plateau.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF91ED2977E37D000CA18C /* Plateau.c */; };
 		8DBF91F02977E5AC000CA18C /* Couleur.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF91EF2977E5AC000CA18C /* Couleur.c */; };
@@ -28,8 +30,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8D61142A2978002500CCE9CD /* Affiche_carac.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Affiche_carac.c; sourceTree = "<group>"; };
 		8D61142C2978313700CCE9CD /* ASCII_dessin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ASCII_dessin.c; sourceTree = "<group>"; };
+		8D61146929811AEF00CCE9CD /* Deroulement_partie.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Deroulement_partie.c; sourceTree = "<group>"; };
+		8D61146B29811B3200CCE9CD /* Placer_case.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Placer_case.c; sourceTree = "<group>"; };
+		8D61146F2981354B00CCE9CD /* condition_victoire.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = condition_victoire.c; sourceTree = "<group>"; };
 		8DBF91E02977E179000CA18C /* Projet_Qwirkle_B1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Projet_Qwirkle_B1; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBF91E32977E179000CA18C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		8DBF91EA2977E192000CA18C /* header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = header.h; sourceTree = "<group>"; };
@@ -69,12 +73,14 @@
 			isa = PBXGroup;
 			children = (
 				8DBF91E32977E179000CA18C /* main.c */,
-				8D61142A2978002500CCE9CD /* Affiche_carac.c */,
+				8D61146B29811B3200CCE9CD /* Placer_case.c */,
+				8D61146F2981354B00CCE9CD /* condition_victoire.c */,
 				8DBF91EA2977E192000CA18C /* header.h */,
 				8DBF91ED2977E37D000CA18C /* Plateau.c */,
 				8DBF91F42977E979000CA18C /* Code_joueur.c */,
 				8DBF91EF2977E5AC000CA18C /* Couleur.c */,
 				8D61142C2978313700CCE9CD /* ASCII_dessin.c */,
+				8D61146929811AEF00CCE9CD /* Deroulement_partie.c */,
 			);
 			path = Projet_Qwirkle_B1;
 			sourceTree = "<group>";
@@ -137,9 +143,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBF91EE2977E37D000CA18C /* Plateau.c in Sources */,
+				8D6114702981354B00CCE9CD /* condition_victoire.c in Sources */,
+				8D61146A29811AEF00CCE9CD /* Deroulement_partie.c in Sources */,
 				8DBF91F02977E5AC000CA18C /* Couleur.c in Sources */,
-				8D61142B2978002500CCE9CD /* Affiche_carac.c in Sources */,
 				8DBF91F52977E979000CA18C /* Code_joueur.c in Sources */,
+				8D61146C29811B3200CCE9CD /* Placer_case.c in Sources */,
 				8DBF91E42977E179000CA18C /* main.c in Sources */,
 				8D61142D2978313700CCE9CD /* ASCII_dessin.c in Sources */,
 			);

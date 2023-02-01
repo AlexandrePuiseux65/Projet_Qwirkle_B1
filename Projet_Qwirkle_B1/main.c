@@ -11,10 +11,10 @@ int main(int argc, const char * argv[])
 {
     int fin;
     int nb;
+    int i = 1;
     JR Joueur [MAX_NOMBRE];
-    PL* Plato;
-    
-    srand(time(NULL));
+    PL Plato;
+    TUL* tuile;
     
     affiche_qwirkle();
     printf("\n\n\n");
@@ -25,9 +25,9 @@ int main(int argc, const char * argv[])
       int c;
 
       /* affichage menu */
-       printf("1.Choix 1 : Lancer une partie Degrader\n");
-       printf("2.Choix 2 : Test du Chargement\n");
-       printf("3.Choix 3 : Regle du Jeux\n");
+       printf("\n1.Choix 1 : Lancer une partie Degrader\n");
+       printf("2.Choix 2 : Test Placement d une tuile  \n");
+       printf("3.Choix 3 : Regle du jeux \n");
        printf("4.Quitter \n");
 
       c = getchar();
@@ -48,9 +48,11 @@ int main(int argc, const char * argv[])
               deroulement_partie(Plato, Joueur, nb);
             break;
          case '2':
-              Chargement();
+              plateau(Plato, Joueur, nb);
             break;
          case '3':
+              Chargement();
+              regle();
             break;
          case '4':
             fin = 1;

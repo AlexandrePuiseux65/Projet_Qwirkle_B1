@@ -14,6 +14,7 @@ int demande_nombre_joueur()
     do{
         printf("\t Nombre de Joueur (2 ; 3 ; 4) = ");
         scanf ("%d",&nb);
+        fflush(stdin);
         
     }while( nb <= 1 || nb >= 5 );
     
@@ -32,19 +33,21 @@ JR* nom_joueur (JR* Joueur, int nb)
     return Joueur;
 }
 
-JR* distribution_case (JR*joueur, int nb)
+int rotation_joueur(int nbJR, int actuelJR)
 {
-    int aleaF = rand()%(6)+1;
-    int aleaC = rand()%(6)+1;
-    int i, j;
-    
-    for(i = 0; i<6; i++)
+    if(actuelJR < nbJR-1)
+        return actuelJR + 1;
+    else
+        return 0;
+}
+
+void distribution_main_depart (JR Joueur[], int i, int nb)
+{
+    printf("\t\n- Joueur : %s -\n",Joueur[i].nom);
+    printf("Voici les pieces que vous avez %s : \n", Joueur[i].nom);
+    distribution_tuile (Joueur, nb);
+    for(int j= 0; j<6; j++)
     {
-        for(j =0; j<6; j++)
-        {
-            
-        }
+        printf("| %d %c |",Joueur[i].tuileJR[j].forme, Joueur[i].tuileJR[j].couleur);
     }
-    
-    return joueur;
 }
